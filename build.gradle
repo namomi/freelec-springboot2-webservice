@@ -17,7 +17,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group 'com.jojoidu.book'
 version '1.0-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
@@ -25,5 +25,9 @@ repositories {
 }
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.projectlombok:lombok')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('com.h2database:h2')
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
