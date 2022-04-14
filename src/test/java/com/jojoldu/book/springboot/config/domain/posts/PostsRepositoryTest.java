@@ -1,6 +1,7 @@
-package com.jojoldu.book.springboot.domain.posts;
+package com.jojoldu.book.springboot.config.domain.posts;
 
-import org.assertj.core.api.Assertions;
+import com.jojoldu.book.springboot.domain.posts.Posts;
+import com.jojoldu.book.springboot.domain.posts.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -48,25 +49,23 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void BaseTimeEntity_등록() throws Exception{
+    public void BaseTimeEntity_등록() {
         //given
-        LocalDateTime now = LocalDateTime.of(2022, 4, 11, 0, 0, 0);
+        LocalDateTime now = LocalDateTime.of(2019, 6, 4, 0, 0, 0);
         postsRepository.save(Posts.builder()
                 .title("title")
                 .content("content")
                 .author("author")
                 .build());
-
         //when
         List<Posts> postsList = postsRepository.findAll();
 
         //then
         Posts posts = postsList.get(0);
 
-        System.out.println(">>>>>>>>>> createDate" + posts.getCreateDate() +
-                ", modifiedDate=" + posts.getModifienDate());
+        System.out.println(">>>>>>>>> createDate=" + posts.getCreatedDate() + ", modifiedDate=" + posts.getModifiedDate());
 
-        assertThat(posts.getCreateDate()).isEqualTo(now);
-        assertThat(posts.getModifienDate()).isEqualTo(now);
+        assertThat(posts.getCreatedDate()).isAfter(now);
+        assertThat(posts.getModifiedDate()).isAfter(now);
     }
 }

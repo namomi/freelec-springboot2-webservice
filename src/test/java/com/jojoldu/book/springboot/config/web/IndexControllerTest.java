@@ -1,4 +1,4 @@
-package com.jojoldu.book.springboot.web;
+package com.jojoldu.book.springboot.config.web;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
