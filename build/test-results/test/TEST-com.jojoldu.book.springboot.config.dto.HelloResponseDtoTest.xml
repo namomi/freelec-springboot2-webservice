@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.jojoldu.book.springboot.config.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-16T14:33:43" hostname="JCui-Macmini.local" time="0.041">
+<testsuite name="com.jojoldu.book.springboot.config.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-27T09:57:56" hostname="JCui-Macmini.local" time="0.031">
   <properties/>
-  <testcase name="중복_기능_테스트()" classname="com.jojoldu.book.springboot.config.dto.HelloResponseDtoTest" time="0.041"/>
+  <testcase name="중복_기능_테스트()" classname="com.jojoldu.book.springboot.config.dto.HelloResponseDtoTest" time="0.031"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
